@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const str = '안녕하세요'
+        str[2]
+        // 녕
+
+        str[str.length-1]
+        // 요
+
+        const array = [273, 'string', true, fucntion(), {}, [273,103]]
+        // undefined
+
+        array
+        // (6)[273, "String", true, f, {...}, Array(2)]
+        // 순서대로 n번째의 값을 확인 가능
+        // 0 : 273
+        // 1 : "String"
+        // ...
+
+        /* 배열 요소에 접근 */
+        const numbers = [273, 52, 103, 32]
+
+        number[0]
+        // 273
+        number[1+1]
+        // 104
+
+        /* 배열 요소 개수 확인 */
+        numbers.length
+        // 4
+
+        number[number.length-1]
+        // 32
+
+        /* 배열 요소 추가*/
+        // 추가 : 배열.push(요소), 배열[인덱스] = '요소'
+        number.push(49, 28)
+        // [273, 52, 103, 32, 49, 28]
+        number[7] = 77
+        // [273, 52, 103, 32, 49, 28, 77]
+
+        /* 배열 요소 삭제*/
+        // 삭제1 : 배열.splice(인덱스, 제거할 요소의 개수)
+        number.splice(49, 28)
+        // [273, 52, 103, 32]
+
+        /* 자료의 비파괴와 파괴*/
+        // 비파괴적 처리 : 처리 후에 원본 내용이 변경되지 않음
+        const a = '안녕'
+        const b = '하세요'
+
+        const c = a + b
+
+        console.log(c);
+        // 안녕하세요
+        console.log(a)
+        console.log(b)
+        // 안녕
+        // 하세요
+
+        // 파괴적 처리 : 처리 후에 원본 내용이 변경됨
+        const array2 = ["사과", "배", "바나나"]
+        array2.push("귤")
+
+        console.log(array2)
+        // ["사과", "배", "바나나", "귤"]
+    </script>
+</body>
+</html>
