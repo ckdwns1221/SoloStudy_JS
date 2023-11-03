@@ -63,6 +63,27 @@
     prototype객체에 속성과 메소드를 추가하면 모든 객체(와 기본 자료형)에서 해당 속성과 메소드를 사용할 수 있다.
 
     객체 자료형 이름.prototype.메소드이름 = function() {
-        
+
     }
 */
+
+/* Number 객체 */
+/* 
+    숫자 N번째 자리 수까지 출력하기 : toFixed()
+    소수점 이하 몇자리까지만 출력하고 싶을 때 사용. 2자리면 toFixed(2)
+*/
+/* 
+    NaN과 infinity 확인하기 : isNaN(), isFinite()
+    어떤 숫자가 NaN(Not a Number)인지 또는 Infinity(무한)인지 확인할 때는 Number.isNaN(), Number.isFinite()메소드를 사용한다
+*/
+
+/* String 객체 */
+/* 
+    문자열 양쪽 끝의 공백 없에기 : trim()메소드
+    "   안녕하세요   " ->   "안녕하세요"
+*/
+/* 
+    문자열을 특정 기호로 자르기 : split()
+    쉼표(또는 다른 것)로 구분된 문자열을 읽어서 분해해야 할 때 사용
+*/
+
