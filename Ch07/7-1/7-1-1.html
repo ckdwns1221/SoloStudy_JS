@@ -1,0 +1,49 @@
+<!-- DOMContentLoaded 이벤트 -->
+    <!-- 
+        문서 객체를 조작할 때는 DOMContentLoaded 이벤트를 사용한다. 코드를 입력할때 DOMContentLoaded 문자열은 오탈자를 입력해도
+        오류를 발생하지 않으므로 주의해서 입력해야 한다.
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // 문장
+        })
+
+        HTML페이지는 코드를 위에서 아래로 차례대로 실행한다.
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+        </head>
+        <body>
+
+        </body>
+        </html>
+     -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // HTMl 태그를 쉽게 만들 수 있는 콜백 함수를 선언
+        const h1 = (text) => `<h1>${text}</h1>`
+    </script>
+    <script>
+        document.body.innerHTML += h1('1번째 script 태그')      // 앞에서 선언한 h1함수를 실행
+    </script>
+    <!-- 기본적으로 head 태그 내부에 script 태그를 배치하면 body 태그에 있는 문서 객체(요소)에 접근할 수 없다. -->
+</head>
+<body>
+    <script>
+        document.body.innerHTML += h1('2번째 script 태그')
+    </script>
+    <h1>1번째 h1 태그</h1>
+    <script>
+        document.body.innerHTML += h1('3번째 script 태그')
+    </script>
+    <h1>2번째 h1 태그</h1>
+</body>
+</html>

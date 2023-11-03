@@ -1,0 +1,29 @@
+<!-- 
+    원래는 head 태그 내부의 script 태그에서 body 태그에 있는 문서에 접근하려면 화면에 무선 객체(요소)를 모두 읽어들일 때까지
+    기다려야 하지만,DOMContentLoaded 이벤트는 웹 브라우저가 문서 객체를 모두 읽고 나서 실행하는 이벤트여서, 코드를 실행하면
+    script 태그가 body 태그 이전에 위치해도 문제없이 코드가 실행된다.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // DOMContentLoaded 이벤트 연결
+        document.addEventListener('DOMContentLoaded', () => {
+            const h1 = (text) => `<h1>${text}</h1>`
+            document.body.innerHTML += h1('DOMContentLoaded 이벤트 발생')
+        })
+        // addEventListener() 메소드
+        /*
+            document.addEventListener('DOMContentLoaded', () => {})는 "document라는 문서 객체(요소)의 DOMContentLoaded 
+            이벤트가 발생했을 때, 매개변수로 지정한 콜백 함수를 실행해라"는 의미이다.
+        */
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
