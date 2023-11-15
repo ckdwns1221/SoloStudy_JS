@@ -1,0 +1,29 @@
+<!-- 글자 조작하기 -->
+<!-- 
+    지금까지 살펴본 예제들에서 innerHTML 속성과 textContent 속성을 사용해서 문서 객체 내부의 글자를 조작했다.
+    문서객체.textContent는 입력된 문자열을 그대로 넣고
+    문서객체.innerHTML은 입력된 문자열을 HTML 형식으로 넣는다.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const a = document.querySelector('#a')
+            const b = document.querySelector('#b')            
+
+            a.textContent = '<h1> textContetn 속성 <h1>'
+            b.innerHTML = '<h1> innerHTML 속성 <h1>'
+            })
+    </script>
+</head>
+<body>
+    <!-- a는 텍스트 형식으로 출력 되지만, b는 html의 h1태그 형식으로 출력됨. -->
+    <div id="a"></div>
+    <div id="b"></div>
+</body>
+</html>

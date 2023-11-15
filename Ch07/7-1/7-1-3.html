@@ -1,0 +1,49 @@
+<!-- 문서 객체 가져오기 -->
+<!-- 
+    document.body 코드를 사용하면 문서의 body 요소를 읽어들일 수 있다. 
+    이외에도 문서에 있는 head요소와 title요소 등은 다음과 같은 방법으로 읽어들일 수 있다.
+    
+    document.head
+    documnet.body
+    document.title
+    
+    이는 웹 브라우저가 자바스크립테가 "당연히 있겠지"라고 전제하고 만든 속성이다. 
+    우리가 head 요소와 body 요소 내부에 만든 다른 요소들은 다음과 같은 별도의 메소드를 사용해서 접근한다.
+
+    document.querySelector(선택자)
+    document.querySelectorAll(선택자)
+
+    선택자 부분에는 css 선택자를 입력한다. css 선택자는 매우 다양하지만,
+    이 책에서 자주 사용하는 기본적인 css 선택자는 다음과 같다.
+
+    // 이름
+    태그 선택자, 아이디 선택자, 클래스 선택자, 속성 선택자, 후손 선택자
+
+    // 선택자 형태
+    태그, #아이디, .클래스, [속성=값], 선택자_A 선택자_B
+
+    또한, querySelector()메소드는 요소를 하나만 추출하고, querySelectorAll() 메소드는 문서 객체를 여러 개 추출한다.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // 요소를 읽어들임.
+            const header = document.querySelector('h1')         // h1태그 이름으로 요소를 선택
+
+            // 텍스트와 스타일을 변경.
+            header.textContent = 'HEADERS'
+            header.style.color = 'white'
+            header.style.backgroundColor = 'black'
+            header.style.padding = '10px'
+        })
+    </script>
+</head>
+<body>
+    <h1></h1>
+</body>
+</html>
